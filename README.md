@@ -8,14 +8,14 @@ Que seja uma jornada incrível para todos nós! 🚀
 🔹 Branch individual: Cada participante trabalhará em sua própria branch, seguindo o padrão:
 
 <code>git checkout seuemaildaunifor</code>
-🔹 Branch principal (main): Contém a versão oficial e consolidada do projeto.
-🔹 Commits organizados: É essencial manter boas práticas ao nomear commits e descrever alterações.
+🔹 Branch principal (main): Contém a versão oficial e consolidada do projeto.<br>
+🔹 Commits organizados: É essencial manter boas práticas ao nomear commits e descrever alterações.<br>
 
 🔄 Como alternar entre branches
-Para acessar sua branch e começar a contribuir, utilize:
+Para acessar sua branch e começar a contribuir, utilize:<br>
 <code>git checkout seuemaildaunifor</code> 
 
-Caso ainda não exista, crie-a com:
+Caso ainda não exista, crie-a com:<br>
 <code>git checkout -b seuemaildaunifor</code>
 
 Sejam bem-vindos, um ótimo semestre a todos e bora codar! 🚀
