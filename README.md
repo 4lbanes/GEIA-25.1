@@ -1,8 +1,8 @@
 # Sejam muito bem-vindos ao repositório oficial do GE! 🚀  
 
-Este será o nosso espaço central para **colaboração, aprendizado e desenvolvimento** dentro do grupo de estudos. Aqui, vamos compartilhar conhecimento, construir projetos e crescer juntos!  
+Olá caro aluno, seja muito bem vindo ao nosso repositório do grupo de estudo de **Introdução a Manipulações de Planilhas e Estatístisca**, Este será o nosso espaço central para **colaboração, aprendizado e desenvolvimento** dentro do grupo de estudos. Aqui, vamos compartilhar conhecimento, construir o projeto final e crescer juntos!  
 
-Cada membro terá sua própria **branch**, nomeada conforme o e-mail institucional, garantindo **organização e autonomia** no desenvolvimento. Conto com todos para fazermos deste repositório um ambiente **produtivo e enriquecedor**.  
+**IMPORTANTE**: Cada membro terá sua própria **branch**, nomeada conforme o e-mail institucional, garantindo **organização e clareza** no desenvolvimento. Conto com todos para fazermos deste repositório um ambiente **produtivo e enriquecedor**.  
 
 Que seja uma jornada incrível para todos nós! 🚀  
 
@@ -47,7 +47,7 @@ Se você acabou de entrar no repositório, siga estes passos para começar:
 
 1. **Clonar o repositório**  
    ```bash
-   git clone https://github.com/4lbanes/GEIA-25.1.git
+   git clonehttps://github.com/4lbanes/GEIA-25.1.git
    cd <nome-do-repositorio>
 
 Para acessar sua branch e começar a contribuir, utilize:
@@ -72,5 +72,4 @@ matplotlib → Visualização de dados.
 
 Sejam bem-vindos! Um ótimo semestre a todos e bora codar! 🚀
 
-**Arthur Veras**<br>
 📍 Fortaleza, 2025
