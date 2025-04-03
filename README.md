@@ -45,7 +45,7 @@ git commit -m "feat: implementar sistema de autenticação JWT"
 
 Se você acabou de entrar no repositório, siga estes passos para começar:  
 
-1. **Clonar o repositório**  
+1. **Clonar o Repositório**  
    ```bash
    git clonehttps://github.com/4lbanes/GEIA-25.1.git
    cd <nome-do-repositorio>
@@ -55,7 +55,29 @@ Para acessar sua branch e começar a contribuir, utilize:
   git checkout seuemaildaunifor
 ```
 
-2. **Instalar as Dependências**<br>
+2. **Estrutuação de Diretórios**
+- 📁 build/
+  - 📄requirements.txt
+  - 📄venv.sh
+- 📁 notebooks/
+  - 📄into.ipynb
+
+- 📄 .gitignore
+- 📄 README.md
+  
+**Explicação dos arquivos:**<br>
+📁 build/
+- requirements.txt: Lista todas as dependências necessárias para o projeto, garantindo que todos os pacotes essenciais sejam instalados corretamente.
+- venv.sh: Script de automação responsável por criar e ativar o ambiente virtual do Python, além de instalar automaticamente as dependências definidas no requirements.txt.
+
+📁 notebooks/
+- intro.ipynb: Notebook introdutório explicando como utilizar o Jupyter Notebook, incluindo exemplos práticos para facilitar o uso da ferramenta.
+
+📄 .gitignore: Define os arquivos e diretórios que devem ser ignorados pelo Git, evitando que arquivos desnecessários ou sensíveis sejam versionados.
+📄 README.md: Documento principal do repositório, contendo informações sobre o projeto, instruções de instalação, uso e contribuições.
+  
+
+3. **Instalação das Dependências**<br>
 Para configurar o ambiente e instalar as bibliotecas necessárias, basta rodar os seguintes comandos no terminal:  
 ```bash
   cd build
@@ -77,6 +99,7 @@ Se, após rodar o script, o seu terminal não exibir algo semelhante a <code>(.v
 | **Linux/MacOS**   | <code>source .venv/bin/activate</code>|
 | **Windows (CMD)**    | <code>.venv\Scripts\activate.bat</code>| 
 | **Windows (PowerShell)**   | <code>.venv\Scripts\activate.ps1</code>|
+
 
 
 ## 🛠️ Tecnologias Utilizadas
