@@ -49,11 +49,35 @@ Se você acabou de entrar no repositório, siga estes passos para começar:
    ```bash
    git clonehttps://github.com/4lbanes/GEIA-25.1.git
    cd <nome-do-repositorio>
-
+    
 Para acessar sua branch e começar a contribuir, utilize:
 ```bash
   git checkout seuemaildaunifor
 ```
+
+2. **Instalar as Dependências**<br>
+Para configurar o ambiente e instalar as bibliotecas necessárias, basta rodar os seguintes comandos no terminal:  
+```bash
+  cd build
+```
+Esse comando entra na pasta <code>build</code> do projeto, nessa pasta existe o arquivo de dependências(<code>requirements.txt</code>) e um arquivo de instalação(<code>venv.sh</code>). Dentro da pasta, digite o comando:
+```bash
+  bash venv.sh
+```
+Este script criará e ativará um ambiente virtual na raíz do projeto, além de instalar as dependências essenciais do projeto:
+
+<code>numpy</code> → Operações matemáticas e vetoriais
+
+<code>pandas</code> → Manipulação e análise de dados
+
+Se, após rodar o script, o seu terminal não exibir algo semelhante a <code>(.venv)</code>, significa que o ambiente virtual não foi ativado corretamente. Para ativá-lo manualmente, utilize o comando correspondente ao seu sistema operacional:
+
+| Sistema Operacional | Comando para ativação do Ambiente Virtual|        
+|------------|------------------------------------------------|
+| **Linux/MacOS**   | <code>source .venv/bin/activate</code>|
+| **Windows (CMD)**    | <code>.venv\Scripts\activate.bat</code>| 
+| **Windows (PowerShell)**   | <code>.venv\Scripts\activate.ps1</code>|
+
 
 ## 🛠️ Tecnologias Utilizadas
 **Este repositório utiliza as seguintes tecnologias e bibliotecas:**
@@ -70,6 +94,4 @@ numpy → Cálculo numérico e operações vetoriais.
 
 matplotlib → Visualização de dados.
 
-Sejam bem-vindos! Um ótimo semestre a todos e bora codar! 🚀
-
-📍 Fortaleza, 2025
+Sejam bem-vindos! Um ótimo semestre a todos, contem comigo para tirar as suas dúvidas e bora codar! 🚀
