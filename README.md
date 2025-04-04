@@ -56,7 +56,7 @@ Para acessar sua branch e começar a contribuir, utilize:
   git checkout seuemaildaunifor
 ```
 
-2. **Estrutuação de Diretórios**
+2. **Estruturação de Diretórios**
 - 📁 build/
   - 📄requirements.txt
   - 📄venv.sh
