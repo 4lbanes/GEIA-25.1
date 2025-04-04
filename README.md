@@ -1,6 +1,7 @@
 # Sejam muito bem-vindos ao repositório oficial do GE! 🚀  
 
-Olá caro aluno, seja muito bem vindo ao nosso repositório do grupo de estudo de **Introdução a Manipulações de Planilhas e Estatístisca**, Este será o nosso espaço central para **colaboração, aprendizado e desenvolvimento** dentro do grupo de estudos. Aqui, vamos compartilhar conhecimento, construir o projeto final e crescer juntos!  
+Olá, caro aluno! Seja muito bem-vindo ao repositório oficial do nosso grupo de estudos: **Introdução à Manipulação de Planilhas e Estatística**.
+Este será o nosso espaço central de colaboração, aprendizado e desenvolvimento, onde vamos compartilhar conhecimento, construir nosso projeto final e crescer juntos. 
 
 **IMPORTANTE**: Cada membro terá sua própria **branch**, nomeada conforme o e-mail institucional, garantindo **organização e clareza** no desenvolvimento. Conto com todos para fazermos deste repositório um ambiente **produtivo e enriquecedor**.  
 
@@ -117,4 +118,9 @@ numpy → Cálculo numérico e operações vetoriais.
 
 matplotlib → Visualização de dados.
 
-Sejam bem-vindos! Um ótimo semestre a todos, contem comigo para tirar as suas dúvidas e bora codar! 🚀
+## 🔗 Links Úteis
+
+- [Documentação Oficial do Git](https://git-scm.com/doc)
+- [Curso gratuito de Git e GitHub (Rocketseat)](https://www.rocketseat.com.br/discover)
+- [Documentação do Jupyter Notebook](https://jupyter.org/)
+- [Documentação do pandas](https://pandas.pydata.org/docs/)
