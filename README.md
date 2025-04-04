@@ -47,7 +47,7 @@ Se você acabou de entrar no repositório, siga estes passos para começar:
 
 1. **Clonar o Repositório**  
    ```bash
-   git clonehttps://github.com/4lbanes/GEIA-25.1.git
+   git clone https://github.com/4lbanes/GEIA-25.1.git
    cd <nome-do-repositorio>
     
 Para acessar sua branch e começar a contribuir, utilize:
