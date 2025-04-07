@@ -109,7 +109,29 @@ Se, após rodar o script, o seu terminal não exibir algo semelhante a <code>(.v
 | **Windows (CMD)**    | <code>.venv\Scripts\activate.bat</code>| 
 | **Windows (PowerShell)**   | <code>.venv\Scripts\activate.ps1</code>|
 
+4.**Entrega dos Trabalhos**
+Durante o grupo de estudos (GE), teremos alguns pequenos trabalhos com o objetivo de acompanhar o aprendizado de cada participante.
 
+Cada integrante possui sua própria branch. Portanto, para cada novo entregável, basta criar uma pasta dentro do diretório `submissions/` com o seguinte padrão:
+
+### 📌 Exemplo de nome da pasta:
+📁<code>ent-1 (seu-nome)<code>
+
+**IMPORTANTE:** Use seu primeiro nome ou nome identificável (sem espaços).
+
+### 📁 Estrutura esperada:
+
+📁 submissions/ 
+  📁ent-1 arthur/
+   - main.py
+   - 📄README.md
+   
+### ✅ Regras:
+- Os arquivos do projeto devem ser nomeados de forma clara e coerente com o conteúdo.
+- Utilize extensões apropriadas (.ipynb, .py, .md, etc.).
+- Sempre que possível, adicione um `README.md` dentro da sua pasta explicando brevemente o que foi feito.
+
+Essa organização ajuda na revisão, no versionamento e na troca de conhecimento entre os membros do grupo.
 
 ## 🛠️ Tecnologias Utilizadas
 **Este repositório utiliza as seguintes tecnologias e bibliotecas:**
