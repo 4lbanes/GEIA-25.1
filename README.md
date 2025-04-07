@@ -64,7 +64,8 @@ Para acessar sua branch e começar a contribuir, utilize:
   -📁 processed/<br>
   -📁 raw/
 - 📁 notebooks/<br>
-  -📄into.ipynb
+  -📄into.ipynb<br>
+- 📁 submissions/
 
 - 📄 .gitignore
 - 📄 README.md
@@ -117,20 +118,20 @@ Durante o grupo de estudos (GE), teremos alguns pequenos trabalhos com o objetiv
 Cada integrante possui sua própria branch. Portanto, para cada novo entregável, basta criar uma pasta dentro do diretório `submissions/` com o seguinte padrão:
 
 ### 📌 Exemplo de nome da pasta:
-📁<code>ent-1 (seu-nome)<code>
+📁<code>ent-1 (seu-nome)</code>
 
 **IMPORTANTE:** Use seu primeiro nome ou nome identificável (sem espaços).
 
 ### 📁 Estrutura esperada:
 
-📁 submissions/ 
-  📁ent-1 arthur/
-   - main.py
-   - 📄README.md
+📁 submissions/<br>
+  - 📁ent-1 arthur/<br>
+     - main.py
+     - 📄README.md
 
 ### ✅ Regras:
 - Os arquivos do projeto devem ser nomeados de forma clara e coerente com o conteúdo.
-- Utilize extensões apropriadas (.ipynb, .py, .md, etc.).
+- Utilize extensões apropriadas (<code>.ipynb</code>, <code>.py</code>, <code>.md</code>, etc.).
 - Sempre que possível, adicione um `README.md` dentro da sua pasta explicando brevemente o que foi feito.
 
 Essa organização ajuda na revisão, no versionamento e na troca de conhecimento entre os membros do grupo.
