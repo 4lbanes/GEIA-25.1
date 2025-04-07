@@ -57,13 +57,13 @@ Para acessar sua branch e começar a contribuir, utilize:
 ```
 
 2. **Estruturação de Diretórios**
-- 📁 build/
-  -📄requirements.txt
+- 📁 build/<br>
+  -📄requirements.txt<br>
   -📄venv.sh
-- 📁 data/
-  -📁 processed/
+- 📁 data/<br>
+  -📁 processed/<br>
   -📁 raw/
-- 📁 notebooks/
+- 📁 notebooks/<br>
   -📄into.ipynb
 
 - 📄 .gitignore
