@@ -60,6 +60,9 @@ Para acessar sua branch e começar a contribuir, utilize:
 - 📁 build/<br>
   -📄requirements.txt<br>
   -📄venv.sh
+- 📁 docs/
+   - 📁 classes/
+   - 📁 works/
 - 📁 data/<br>
   -📁 processed/<br>
   -📁 raw/
@@ -74,6 +77,10 @@ Para acessar sua branch e começar a contribuir, utilize:
 📁 build/
 - requirements.txt: Lista todas as dependências necessárias para o projeto, garantindo que todos os pacotes essenciais sejam instalados corretamente.
 - venv.sh: Script de automação responsável por criar e ativar o ambiente virtual do Python, além de instalar automaticamente as dependências definidas no requirements.txt.
+
+- 📁 docs/
+- classes: Pasta de documentação das aulas, aqui vai conter o conteúdo dado no dia, os slides e a presença do dia.
+- works: Pasta de documentação dos entregáveis de cada nível, aqui vai conter a documentação de cada trabalho.
 
 📁 data/
 - 📁 processed: Armazena os dados já limpos, transformados ou tratados, prontos para análise, modelagem ou visualização.
