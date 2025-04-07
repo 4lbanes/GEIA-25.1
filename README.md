@@ -58,10 +58,13 @@ Para acessar sua branch e começar a contribuir, utilize:
 
 2. **Estruturação de Diretórios**
 - 📁 build/
-  - 📄requirements.txt
-  - 📄venv.sh
+  -📄requirements.txt
+  -📄venv.sh
+- 📁 data/
+  -📁 processed/
+  -📁 raw/
 - 📁 notebooks/
-  - 📄into.ipynb
+  -📄into.ipynb
 
 - 📄 .gitignore
 - 📄 README.md
@@ -71,10 +74,15 @@ Para acessar sua branch e começar a contribuir, utilize:
 - requirements.txt: Lista todas as dependências necessárias para o projeto, garantindo que todos os pacotes essenciais sejam instalados corretamente.
 - venv.sh: Script de automação responsável por criar e ativar o ambiente virtual do Python, além de instalar automaticamente as dependências definidas no requirements.txt.
 
+📁 data/
+- 📁 processed: Armazena os dados já limpos, transformados ou tratados, prontos para análise, modelagem ou visualização.
+- 📁 raw: Armazena os dados brutos, exatamente como foram obtidos de fontes externas (bases públicas, web scraping, APIs, etc).
+
 📁 notebooks/
 - intro.ipynb: Notebook introdutório explicando como utilizar o Jupyter Notebook, incluindo exemplos práticos para facilitar o uso da ferramenta.
 
-📄 .gitignore: Define os arquivos e diretórios que devem ser ignorados pelo Git, evitando que arquivos desnecessários ou sensíveis sejam versionados.
+
+📄 .gitignore: Define os arquivos e diretórios que devem ser ignorados pelo Git, evitando que arquivos desnecessários ou sensíveis sejam versionados.<br>
 📄 README.md: Documento principal do repositório, contendo informações sobre o projeto, instruções de instalação, uso e contribuições.
   
 
