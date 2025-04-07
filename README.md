@@ -81,6 +81,8 @@ Para acessar sua branch e começar a contribuir, utilize:
 📁 notebooks/
 - intro.ipynb: Notebook introdutório explicando como utilizar o Jupyter Notebook, incluindo exemplos práticos para facilitar o uso da ferramenta.
 
+📁 submissions/
+- Pasta utilizada para as entregas dos trabalhos de acompanhamento.
 
 📄 .gitignore: Define os arquivos e diretórios que devem ser ignorados pelo Git, evitando que arquivos desnecessários ou sensíveis sejam versionados.<br>
 📄 README.md: Documento principal do repositório, contendo informações sobre o projeto, instruções de instalação, uso e contribuições.
@@ -125,7 +127,7 @@ Cada integrante possui sua própria branch. Portanto, para cada novo entregável
   📁ent-1 arthur/
    - main.py
    - 📄README.md
-   
+
 ### ✅ Regras:
 - Os arquivos do projeto devem ser nomeados de forma clara e coerente com o conteúdo.
 - Utilize extensões apropriadas (.ipynb, .py, .md, etc.).
