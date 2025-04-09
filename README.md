@@ -32,24 +32,23 @@ Que seja uma jornada incrível para todos nós! 🚀
 Manter um padrão nos commits é essencial para um histórico claro e bem organizado. Abaixo está uma tabela com os principais tipos de commits e seus significados:  
 
 | Tipo        | Significado                                      | Exemplo de Uso |
-|------------|------------------------------------------------|----------------|
-| **feat**   | Adição de uma nova funcionalidade              | `feat: adicionar botão de login` |
-| **fix**    | Correção de um bug                             | `fix: corrigir erro no carregamento da página` |
-| **docs**   | Alterações na documentação                     | `docs: atualizar README com instruções de setup` |
-| **style**  | Mudanças de formatação (espaços, indentação)   | `style: ajustar identação no arquivo main.py` |
-| **refactor** | Refatoração de código sem mudança de comportamento | `refactor: otimizar função de busca` |
-| **perf**   | Melhorias de performance                       | `perf: reduzir tempo de resposta da API` |
-| **test**   | Adição ou modificação de testes                | `test: adicionar testes unitários para validação de login` |
-| **chore**  | Tarefas auxiliares que não afetam o código-fonte | `chore: atualizar dependências do projeto` |
-| **ci**     | Alterações em configurações de integração contínua | `ci: ajustar pipeline do GitHub Actions` |
-| **build**  | Mudanças que afetam o processo de build ou dependências externas | `build: atualizar versão do Node.js no projeto` |
-| **revert** | Reversão de um commit                          | `revert: desfazer commit anterior que causava erro` |
+|-------------|--------------------------------------------------|----------------|
+| ✨ **feat**     | Nova funcionalidade                              | `feat: adicionar botão de login` |
+| 🐛 **fix**      | Correção de bug                                  | `fix: corrigir erro no carregamento da página` |
+| 📝 **docs**     | Mudanças na documentação                         | `docs: atualizar README` |
+| 💄 **style**    | Ajustes visuais ou de formatação                 | `style: ajustar identação` |
+| ♻️ **refactor** | Refatoração sem alterar funcionalidade           | `refactor: otimizar função` |
+| ⚡ **perf**     | Melhorias de performance                         | `perf: reduzir tempo de resposta` |
+| ✅ **test**     | Adição/modificação de testes                     | `test: adicionar testes unitários` |
+| 🔧 **chore**    | Tarefas de suporte que não afetam o produto final| `chore: atualizar dependências` |
+| 🚀 **build**    | Ajustes no processo de build ou dependências     | `build: configurar Dockerfile` |
+| 🔁 **revert**   | Reverter um commit anterior                      | `revert: desfazer mudança` |
 
 
 **Dica:** Sempre utilize mensagens curtas e diretas, seguidas de uma breve descrição quando necessário.  
 Exemplo de commit bem formatado:  
 ```bash
-git commit -m "feat: implementar sistema de autenticação JWT" 
+git commit -m "✨feat: implementar sistema de autenticação JWT" 
 ```
 
 ## 📝 Checklist Inicial  
