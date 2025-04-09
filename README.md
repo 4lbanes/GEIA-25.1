@@ -17,6 +17,7 @@ Que seja uma jornada incrível para todos nós! 🚀
 - [📝 Checklist Inicial](#-checklist-inicial)
 - [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
 - [🔗 Links Úteis](#-links-úteis)
+- [🆘 Ajuda](#-Ajuda)
 
 ## 🌱 Estrutura do Repositório  
 
@@ -59,7 +60,7 @@ Se você acabou de entrar no repositório, siga estes passos para começar:
    ```bash
    git clone https://github.com/4lbanes/GEIA-25.1.git
    cd GEIA-25.1
-    
+   ``` 
 Para acessar sua branch e começar a contribuir, utilize:
 ```bash
   git checkout seuemaildaunifor
@@ -155,17 +156,12 @@ Essa organização ajuda na revisão, no versionamento e na troca de conheciment
 ## 🛠️ Tecnologias Utilizadas
 **Este repositório utiliza as seguintes tecnologias e bibliotecas:**
 
-**Linguagem:** Python
+| Categoria   | Tecnologia             |
+|-------------|------------------------|
+| Linguagem   | Python                 |
+| Ferramentas | Jupyter Notebook       |
+| Bibliotecas | pandas, numpy, matplotlib |
 
-**Ferramentas:** Jupyter Notebook
-
-**Bibliotecas:**
-
-pandas → Manipulação e análise de dados.
-
-numpy → Cálculo numérico e operações vetoriais.
-
-matplotlib → Visualização de dados.
 
 ## 🔗 Links Úteis
 
@@ -173,3 +169,40 @@ matplotlib → Visualização de dados.
 - [Curso gratuito de Git e GitHub (Rocketseat)](https://www.rocketseat.com.br/discover)
 - [Documentação do Jupyter Notebook](https://jupyter.org/)
 - [Documentação do pandas](https://pandas.pydata.org/docs/)
+
+
+## 🆘 Ajuda
+
+Problemas comuns e soluções:
+
+❌ Erro ao ativar o ambiente virtual<br>
+👉 Verifique se o Python 3.10+ está instalado com <code>python --version</code><br>
+👉 Certifique-se de que você está no diretório raiz do projeto ao executar o comando de ativação<br>
+👉 No Windows, execute o terminal como administrador, se necessário<br>
+
+❌ Dependências não instaladas<br>
+👉 Execute <code>pip install -r build/requirements.txt</code> manualmente<br>
+👉 Verifique se o ambiente virtual está **ativado** antes de instalar as dependências<br>
+👉 Tente atualizar o pip com <code>pip install --upgrade pip</code><br>
+
+❌ Erro: <code>comando ‘bash’ não encontrado</code> (Windows)<br>
+👉 O Windows **não** possui o interpretador bash nativo. Use o <code>Git Bash</code> ou o <code>WSL</code> (Windows Subsystem for Linux) para rodar o <code>venv.sh</code><br>
+👉 Alternativamente, crie o ambiente manualmente:
+
+```bash
+  python -m venv .venv
+  source .venv/bin/activate
+  pip install -r build/requirements.txt
+```
+
+❌ Erro ao abrir notebooks no Jupyter<br>
+👉 Verifique se o Jupyter está instalado (<code>pip show notebook</code>)<br>
+👉 Caso não esteja, instale com:
+
+```bash
+  pip install notebook
+```
+🧠 Está perdido(a)? Precisa de ajuda com Git, Python ou o projeto em geral?<br>
+👉 Não hesite em abrir uma issue aqui no repositório ou chamar alguém no grupo do WhatsApp<br>
+
+Toda dúvida é válida. Estamos aqui para aprender juntos!
