@@ -9,6 +9,15 @@ Que seja uma jornada incrível para todos nós! 🚀
 
 ---
 
+## 📚 Sumário
+
+- [Boas-vindas](#-sejam-muito-bem-vindos-ao-repositório-oficial-do-ge-)
+- [🌱 Estrutura do Repositório](#-estrutura-do-repositório)
+- [📌 Padronização de Commits](#-padronização-de-commits)
+- [📝 Checklist Inicial](#-checklist-inicial)
+- [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [🔗 Links Úteis](#-links-úteis)
+
 ## 🌱 Estrutura do Repositório  
 
 - **Branch individual**: Cada participante trabalhará em sua própria branch, seguindo o padrão:  
@@ -36,6 +45,7 @@ Manter um padrão nos commits é essencial para um histórico claro e bem organi
 | **build**  | Mudanças que afetam o processo de build ou dependências externas | `build: atualizar versão do Node.js no projeto` |
 | **revert** | Reversão de um commit                          | `revert: desfazer commit anterior que causava erro` |
 
+
 **Dica:** Sempre utilize mensagens curtas e diretas, seguidas de uma breve descrição quando necessário.  
 Exemplo de commit bem formatado:  
 ```bash
@@ -49,7 +59,7 @@ Se você acabou de entrar no repositório, siga estes passos para começar:
 1. **Clonar o Repositório**  
    ```bash
    git clone https://github.com/4lbanes/GEIA-25.1.git
-   cd <nome-do-repositorio>
+   cd GEIA-25.1
     
 Para acessar sua branch e começar a contribuir, utilize:
 ```bash
