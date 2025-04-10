@@ -203,6 +203,6 @@ Problemas comuns e soluções:
   pip install notebook
 ```
 🧠 Está perdido(a)? Precisa de ajuda com Git, Python ou o projeto em geral?<br>
-👉 Não hesite em abrir uma issue aqui no repositório ou chamar alguém no grupo do WhatsApp<br>
+👉 Não hesite em abrir uma issue aqui no repositório ou chamar alguém no grupo do WhatsApp
 
 Toda dúvida é válida. Estamos aqui para aprender juntos!
