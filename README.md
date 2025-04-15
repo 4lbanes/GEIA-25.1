@@ -78,6 +78,14 @@ Para acessar sua branch e começar a contribuir, utilize:
   -📁 raw/
 - 📁 notebooks/<br>
   -📄into.ipynb<br>
+- 📁 src/<br>
+  - 📁Descriptive Statistics
+    - 📄__init__.py
+    - 📄dispersion_measures.py
+    - 📄measures_central _tendency.py
+  - 📁Inferential Statistics
+  - 📁utils
+    - 📄utils.ipynb
 - 📁 submissions/
 
 - 📄 .gitignore
@@ -98,6 +106,12 @@ Para acessar sua branch e começar a contribuir, utilize:
 
 📁 notebooks/
 - intro.ipynb: Notebook introdutório explicando como utilizar o Jupyter Notebook, incluindo exemplos práticos para facilitar o uso da ferramenta.
+
+📁 src/
+- 📁 Descriptive Statistics: Pasta para os códigos dos métodos da estatística descritiva<br>
+    - __init__.py: Inicialização do construtor, esse arquivo serve pro Python reconhecer a pasta como um pacote.<br>
+    - dispersion_measures.py: Arquivo que contém os códigos dos métodos de **Medidas de Dispersão**(Intervalo, Média, Desvio Padrão Populacional e Simples, Variância Populacional e Simples e Intervalo Interquartil).<br>
+    - measures_central _tendency.py: Arquivo que contém os códigos dos métodos de **Medidas de Têndencia Centrais**(Média, Moda, Mediana).
 
 📁 submissions/
 - Pasta utilizada para as entregas dos trabalhos de acompanhamento.
