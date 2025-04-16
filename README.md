@@ -179,11 +179,11 @@ Essa organização ajuda na revisão, no versionamento e na troca de conheciment
 
 ## 🔗 Links Úteis
 
+- [Documentação do Jupyter Notebook](https://jupyter.org/)
+- [Documentação do Pandas](https://pandas.pydata.org/docs/)
+- [Documentação do Numpy](https://numpy.org/doc/stable/)
 - [Documentação Oficial do Git](https://git-scm.com/doc)
 - [Curso gratuito de Git e GitHub (Rocketseat)](https://www.rocketseat.com.br/discover)
-- [Documentação do Jupyter Notebook](https://jupyter.org/)
-- [Documentação do pandas](https://pandas.pydata.org/docs/)
-
 
 ## 🆘 Ajuda
 
