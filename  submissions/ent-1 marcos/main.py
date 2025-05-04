@@ -19,15 +19,15 @@ def main():
     biblioteca.cadastrar_usuario(usuario1)
     biblioteca.cadastrar_usuario(usuario2)
 
-    # Empréstimo de livros
+    # Fazendo emprestimos de livros...
     biblioteca.emprestar_livro(livro1, usuario1)
     biblioteca.emprestar_livro(livro2, usuario2)
 
-    # Tentativa de emprestar um livro já emprestado
+    # Testes de funcionalidades: Emprestar livro já emprestado
     print("\nTentativa de emprestar um livro já emprestado:")
     biblioteca.emprestar_livro(livro1, usuario2)
 
-    # Relatório de empréstimos
+    # Relatorio de emprestimos da biblioteca
     print("\nRelatório de empréstimos:")
     print(biblioteca.relatorio_emprestimos())
 

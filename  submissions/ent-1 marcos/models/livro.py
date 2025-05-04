@@ -2,11 +2,12 @@ from abc import ABC, abstractmethod
 
 
 class Livro(ABC):
+     # Aqui está a classe do livro, com atributos e métodos para gerenciar o título, autor, ano e status do livro.
     def __init__(self, titulo, autor, ano, status="disponível"):
         self.__titulo = titulo
         self.__autor = autor
         self.__ano = ano
-        self.__status = status  # Certifique-se de que este atributo seja inicializado
+        self.__status = status  
 
     def get_titulo(self):
         return self.__titulo
@@ -26,6 +27,7 @@ class Livro(ABC):
 
 
 class LivroFisico(Livro):
+    # Aqui está a classe do livro fisico(herança da classe Livro), com atributos e métodos para gerenciar o título, autor, ano e status do livro.
     def __init__(self, titulo, autor, ano):
         super().__init__(titulo, autor, ano)  # Chama o construtor da classe base
 
@@ -34,6 +36,7 @@ class LivroFisico(Livro):
 
 
 class LivroDigital(Livro):
+    # Aqui está a classe do livro digital(herança da classe Livro), com atributos e métodos para gerenciar o título, autor, ano e status do livro.
     def __init__(self, titulo, autor, ano):
         super().__init__(titulo, autor, ano)  # Chama o construtor da classe base
 

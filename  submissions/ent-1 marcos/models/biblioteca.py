@@ -3,6 +3,10 @@ from models.usuario import Usuario, UsuarioVIP
 from models.helpers.node import LinkedList
 
 class Biblioteca:
+    #Aqui está a classe da biblioteca, com atributos e métodos para gerenciar os livros e usuários. 
+    #Ela utiliza a classe LinkedList para armazenar os livros e usuários.
+    #Dentro dela tem as classes Livro e Usuario, que são responsáveis por gerenciar os livros e usuários respectivamente.
+
     def __init__(self):
         self.__livros = LinkedList()
         self.__usuarios = LinkedList()
@@ -14,7 +18,10 @@ class Biblioteca:
         self.__usuarios.append(usuario)
 
     def buscar_livro(self, criterio):
-        return self.__livros.find(lambda livro: criterio in (livro.get_titulo(), livro.get_autor()))
+        criterio = criterio.strip().lower()  # Remove espaços extras e converte para minúsculas
+        return self.__livros.find(
+            lambda livro: criterio in livro.get_titulo().strip().lower() or criterio in livro.get_autor().strip().lower()
+        )
 
     def emprestar_livro(self, livro, usuario):
         if livro.get_status() == "disponível":

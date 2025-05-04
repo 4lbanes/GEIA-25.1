@@ -33,6 +33,7 @@ class LinkedList:
         results = []
         current = self.head
         while current:
+            print(f"Verificando: {current.data.get_titulo()} - {current.data.get_autor()}")  # Adicionado para depuração
             if condition(current.data):
                 results.append(current.data)
             current = current.next

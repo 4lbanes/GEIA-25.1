@@ -1,4 +1,5 @@
 class Usuario:
+    # Aqui está a classe do usuario simples, com atributos e métodos para gerenciar os livros emprestados.
     def __init__(self, nome, email):
         self.__nome = nome
         self.__email = email
@@ -21,6 +22,7 @@ class Usuario:
 
 
 class UsuarioVIP(Usuario):
+    # Aqui está a classe do usuario VIP, com atributos e métodos para gerenciar os livros emprestados.
     def __init__(self, nome, email):
         super().__init__(nome, email)
         self.__limite = 10
