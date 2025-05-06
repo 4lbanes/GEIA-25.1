@@ -2,11 +2,11 @@ from abc import ABC, abstractmethod
 
 # Biblioteca
 class Biblioteca:
-    # Onde vai ficar armazenados os usuarios/livros
+    '''Onde vai ser armazenados os dados'''
     usuarios = []
     livros_disponiveis = []
     livros_alugados = []
-    # Exibição no geral
+    '''Exibição no geral, pra usuário tava estranho daí eu tive que usar o join() e fazer um loop'''
     def exibirUsuarios(self):
         for u in self.usuarios:
             livros_formatados = ", ".join(str(livro) for livro in u.get_lista()) if u.get_lista() else "Nenhum"
@@ -20,7 +20,8 @@ class Biblioteca:
         for livro, usuario in self.livros_alugados:
             print(f"Titulo: {livro.get_titulo()} / Autor: {livro.get_autor()} / Ano: {livro.get_ano()} / Status: {livro.get_status()} / Alugado por: {usuario.get_nome()}")
 
-    # Cadastro
+    '''Pega o nome, email e pergunta ao usuário se ele deseja ser regular ou vip, pega o resultado e 
+    da append no vetor usuarios = [] '''
     def cadastrarUsuario(self):
         nome = input("Qual seu nome completo? ")
         email = input("Informe um e-mail para contato: ")
@@ -37,8 +38,8 @@ class Biblioteca:
 
         self.usuarios.append(usuario)
         print(f"Usuário {usuario.get_nome()} {usuario.tipo()} cadastrado com sucesso!")
-
-    # Cadastro do livro, fisdig quer dizer fisico/digital.
+    '''Mesma coisa que o usuário, pega titulo, autor, ano e pergunta se quer cadastrar um livro digital ou fisico, usa as subclasses
+    livrodigital e livrofisico, adiciona ao vetor livrosdisponiveis []'''
     def cadastrarLivro(self):
         titulo = input("Qual o titulo do livro? ")
         autor = input("Qual o autor do livro? ")
@@ -52,9 +53,7 @@ class Biblioteca:
 
         self.livros_disponiveis.append(livro)
         print(f"Livro {titulo} cadastrado em nossa biblioteca com sucesso!")
-
-    # Alugar um livro, checa se o usuário fez o cadastro, se não, volta pro menu. Também checa se o usuário passou dos limites de livro
-    # fazendo essa comparação: len(usuario_encontrado.get_lista()) < usuario_encontrado.get_limite():#
+    '''Pega o nome do usuário, checa se ele já ta cadastrado pra conseguir alugar e adiciona os livros dele no atributo lista []'''
     def alugarLivro(self):
         name_check = input("Qual seu nome completo? ")
         usuario_encontrado = None
@@ -79,7 +78,8 @@ class Biblioteca:
             livro = LivroDigital(titulo, autor, ano)
         else:
             livro = LivroFisico(titulo, autor, ano)
-
+        ''''Checa se ele pode conseguir alugar mais livro baseado se ele é vip ou não, ou seja,
+          limite 3 ou 6, compara len(tamanho da lista/limite)'''
         if len(usuario_encontrado.get_lista()) < usuario_encontrado.get_limite():
             self.livros_alugados.append((livro, usuario_encontrado))
             lista_atual = usuario_encontrado.get_lista()
@@ -91,7 +91,7 @@ class Biblioteca:
         else:
             print("Você chegou ao limite de livros, devolva um de seus livros para conseguir alugar mais.")
             return
-    # Mesma coisa que alugar, checa o usuário, mostra a lista de livros que ele tem e armazena a opção que escolher
+    '''Checa o usuário, compara o titulo se existe, pede pro usuário escolher qual devolver e joga de volta aos livros disponiveis'''
     def devolverLivro(self):
         name_check = input("Qual seu nome completo? ")
         usuario_encontrado = None
@@ -131,7 +131,6 @@ class Biblioteca:
             print(f"Livro '{livro_para_devolver.get_titulo()}' devolvido com sucesso!")
         else:
             print("Livro não encontrado na sua lista.")
-# Classes de usuário, livros e suas respectivas ''extensões''
 class Usuario(ABC):
     def __init__(self, nome, email, limite):
         self._nome = nome
@@ -205,9 +204,8 @@ class LivroDigital(Livro):
         
     def entregar(self):
         print("Livro digital disponibilizado para o usuário.")
-# Sobre a interface e os requisitos: O cadastro de usuário e livros foram feitos,
-# gerenciamento de usuário eu separei pra ser apenas Exibir Usuários, a busca de livro seria as opções 6 e 7 tal como o relatório. 
-# (Exibir Usuários mostra quem alugou, qual e se é fisico ou digital)
+    '''Interface, cadastra usuario e livro, aluga apenas se for usuário, exibe os usuarios cadastrados e seus livros e também 
+    os livros se estão disponiveis/emprestados, isso seria o relatório'''
 def Interface():
     biblioteca = Biblioteca()
     while True:
