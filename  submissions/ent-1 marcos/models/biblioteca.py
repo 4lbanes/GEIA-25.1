@@ -18,7 +18,7 @@ class Biblioteca:
         self.__usuarios.append(usuario)
 
     def buscar_livro(self, criterio):
-        criterio = criterio.strip().lower()  # Remove espaços extras e converte para minúsculas
+        criterio = criterio.strip().lower()  # Remove espaços extras e converte para minúsculas (Usei IA aqui para achar a solução...)
         return self.__livros.find(
             lambda livro: criterio in livro.get_titulo().strip().lower() or criterio in livro.get_autor().strip().lower()
         )
