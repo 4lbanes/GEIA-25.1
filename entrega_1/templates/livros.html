@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Livros{% endblock %}
+{% block content %}
+    <h2>Lista de Livros</h2>
+
+    <form action="{{ url_for('buscar_livro') }}" method="get">
+        <input type="text" name="termo" placeholder="Buscar por título ou autor" value="{{ termo }}">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if livros %}
+        <ul>
+            {% for livro in livros %}
+                <li>{{ livro }}</li>
+                 <form action="{{ url_for('emprestar_livro') }}" method="post">
+                    <input type="hidden" name="livro_titulo" value="{{ livro.titulo }}">
+                    <input type="text" name="usuario_email" placeholder="Email do usuário">
+                    <button type="submit">Emprestar</button>
+                </form>
+                 <form action="{{ url_for('devolver_livro') }}" method="post">
+                    <input type="hidden" name="livro_titulo" value="{{ livro.titulo }}">
+                     <input type="text" name="usuario_email" placeholder="Email do usuário">
+                    <button type="submit">Devolver</button>
+                </form>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhum livro encontrado.</p>
+    {% endif %}
+<a href="{{ url_for('adicionar_livro') }}">Adicionar Novo Livro</a>
+{% endblock %}

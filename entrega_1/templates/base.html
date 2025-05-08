@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Biblioteca Web{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body>
+    <header>
+        <h1>Sistema de Biblioteca</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('listar_livros') }}">Livros</a></li>
+                <li><a href="{{ url_for('listar_usuarios') }}">Usuários</a></li>
+                <li><a href="{{ url_for('relatorio_emprestimos') }}">Relatório de Empréstimos</a></li>
+                 <li><a href="{{ url_for('adicionar_livro') }}">Adicionar Livro</a></li>
+                <li><a href="{{ url_for('adicionar_usuario') }}">Adicionar Usuário</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Sistema de Biblioteca</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

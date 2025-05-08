@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Página Inicial{% endblock %}
+{% block content %}
+    <h2>Bem-vindo ao Sistema de Biblioteca</h2>
+    <p>Esta é a página inicial do sistema. Você pode navegar para as outras seções usando o menu acima.</p>
+    <h3>Estatísticas da Biblioteca</h3>
+    <p>Total de livros: {{ biblioteca.livros }}</p>
+    <p>Total de usuários: {{ biblioteca.usuarios }}</p>
+{% endblock %}

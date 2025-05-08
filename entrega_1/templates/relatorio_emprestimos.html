@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Relatório de Empréstimos{% endblock %}
+{% block content %}
+    <h2>Relatório de Livros Emprestados</h2>
+    {% if relatorio %}
+        <ul>
+            {% for item in relatorio %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhum livro emprestado.</p>
+    {% endif %}
+{% endblock %}
