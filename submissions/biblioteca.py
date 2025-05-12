@@ -14,14 +14,15 @@ class Biblioteca:
         ano = input("Ano de publicação: ")
         while True:
             tipo = input("Tipo do livro (fisico/digital): ").lower()
-            if tipo in ["fisico", "digital"]:
-                break
-            print("Tipo inválido! Escolha entre 'fisico' ou 'digital'!")
-
-        if tipo == "fisico":
-            novo_livro = LivroFisico(titulo, autor, ano)
-        else:
-            novo_livro = LivroDigital(titulo, autor, ano)
+            match tipo:
+                case 'fisico':
+                    novo_livro = LivroFisico(titulo, autor, ano)
+                    break
+                case 'digital':
+                    novo_livro = LivroDigital(titulo, autor, ano)
+                    break
+                case default: 
+                    print("Tipo inválido, por favor escolha dentre 'fisico' ou 'digital'.")
 
         self.livros.append(novo_livro)
         print(f"Livro '{titulo}' cadastrado com sucesso!")
@@ -47,14 +48,17 @@ class Biblioteca:
 
         while True:
             tipo = input("Tipo de usuário (regular/vip): ").lower()
-            if tipo in ["regular", "vip"]:
-                break
-            print("Tipo inválido! Escolha entre 'regular' ou 'vip'.")
+            match tipo:
+                case 'regular':
+                    novo_usuario = UsuarioRegular(nome, email)
+                    break
+                
+                case 'vip':
+                    novo_usuario = UsuarioVIP(nome, email)
+                    break
 
-        if tipo == "regular":
-            novo_usuario = UsuarioRegular(nome, email)
-        else:
-            novo_usuario = UsuarioVIP(nome, email)
+                case default: 
+                        print("Tipo inválido! Escolha entre 'regular' ou 'vip'.")
 
         self.usuarios.append(novo_usuario)
         print(f"Usuário '{nome}' cadastrado com sucesso como {tipo}!")
