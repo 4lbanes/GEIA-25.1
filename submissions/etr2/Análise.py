@@ -18,15 +18,14 @@ variaveis = {
 
 shits = np.array([idade, mat, est, prog, faltas])
 
-def media(array):
-    return np.sum(array) / len(array)
+def mean(array):
+    return np.mean(array)
 
 def mode(array):
-    frequencia = {}
-    
-
-def median(array):
     pass
+    
+def median(array):
+    return np.median(array)
 
 def std(array):
     pass
@@ -46,6 +45,9 @@ def cerca_turkey(array):
 def generate_report():
     print("A média: ")
     for nome, variavel in variaveis.items():
-        print(f"{nome}, {media(variavel)}")
+        print(f"{nome}, {mean(variavel)}")
+    print("A mediana: ")
+    for nome, variavel in variaveis.items():
+        print(f"{nome}, {median(variavel)}")
 
 generate_report()
