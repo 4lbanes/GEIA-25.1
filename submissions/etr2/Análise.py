@@ -16,13 +16,14 @@ variaveis = {
     'Faltas': faltas
 }
 
-shits = [idade, mat, est, prog, faltas]
+shits = np.array([idade, mat, est, prog, faltas])
 
 def media(array):
     return np.sum(array) / len(array)
 
 def mode(array):
-    pass
+    frequencia = {}
+    
 
 def median(array):
     pass
