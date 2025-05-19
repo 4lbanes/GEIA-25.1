@@ -34,16 +34,21 @@ def std(array):
     return np.std(array)
 
 def interval(array):
-    pass
+    return np.max(array) - np.min(array)
 
 def variance(array):
     return np.var(array)
 
 def z_score(array):
-    pass
+    return (array - np.mean(array)) / np.std(array)
 
 def cerca_turkey(array):
-    pass
+    q1 = np.percentile(array, 25)
+    q3 = np.percentile(array, 75)
+    iqr = q3 - q1
+    limite_inferior = q1 - 1.5 * iqr
+    limite_superior = q3 + 1.5 * iqr
+    return limite_inferior, limite_superior
 
 def generate_report():
 
@@ -66,5 +71,21 @@ def generate_report():
     print("A variância: ")
     for nome, variavel in variaveis.items():
         print(f"{nome}, {variance(variavel):.2f}")
+
+    print("O intervalo: ")
+    for nome, variavel in variaveis.items():
+        print(f"{nome}, {interval(variavel):.2f}")
+
+    print("O Z-Score: ")
+    for nome, variavel in variaveis.items():
+        print(f"{nome}, {z_score(variavel)}")
+        # acho que tem q arredondar o caba aq
+
+    print("Cerca de Tukey: ")
+    for nome, variavel in variaveis.items():
+        inf, sup = cerca_turkey(variavel)
+        print(f"{nome}, Inferior: {inf:.2f}, Superior: {sup:.2f}")
+
+    #falta fazer os outliers
 
 generate_report()
