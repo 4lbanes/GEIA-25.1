@@ -1,33 +1,50 @@
 import numpy as np
 
 class AnaliseEstatistica():
-    def __init__(self):
-        pass
-
     def mean(array):
         mean = np.mean(array)
         return mean 
+    
     def mode(array):
-        pass
+        valores_unicos, contagens = np.unique(array, return_counts=True)
+        max_count = np.max(contagens)
+        modas = valores_unicos[contagens == max_count]
+        if len(modas) == 1:
+            return modas[0]
+        return modas.tolist()
+
     def median(array):
         median = np.median(array)
         return median
+    
     def std(array):
         std = np.std(array)
         return std 
+    
     def interval(array):
-        return np.max(array) - np.min(array)
+        interval = np.max(array) - np.min(array)
+        return interval
+    
     def variance(array):
         variance = np.var(array)
         return variance
-    def zscore(array):
-        return (array - np.mean(array)) / np.std(array)
-    def cerca_tukey(array):
-        q1 = np.percentile(array, 25)
-        q3 = np.percentile(array, 75)
-        iqr = q3 - q1
-        limite_inferior = q1 - 1.5 * iqr
-        limite_superior = q3 + 1.5 * iqr
-        return limite_inferior, limite_superior
-    def generate_report():
-        pass
+    
+    def generate_report(dados, ids, colunas):
+        from outliers import DeteccaoOutliers
+
+        print("\n-- Relatório --")
+        for i, nome_coluna in enumerate(colunas):
+            col = dados[:, i]
+            print(f"\n--- {nome_coluna} ---")
+            print(f"Média: {AnaliseEstatistica.mean(col):.2f}")
+            print(f"Moda: {AnaliseEstatistica.mode(col)}")
+            print(f"Mediana: {AnaliseEstatistica.median(col):.2f}")
+            print(f"Desvio Padrão: {AnaliseEstatistica.std(col):.2f}")
+            print(f"Variância: {AnaliseEstatistica.variance(col):.2f}")
+            print(f"Intervalo: {AnaliseEstatistica.interval(col):.2f}")
+
+            z_vals, z_outs = DeteccaoOutliers.zscore(col)
+            (_, _), tukey_outs = DeteccaoOutliers.cerca_tukey(col)
+
+            print(f"Outliers (Z-Score): {len(z_outs)} → {[ids[i] for i in z_outs]}")
+            print(f"Outliers (Tukey): {len(tukey_outs)} → {[ids[i] for i in tukey_outs]}")
