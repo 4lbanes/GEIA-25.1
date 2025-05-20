@@ -1,91 +1,88 @@
 import numpy as np
 
-array = np.genfromtxt("base.csv", delimiter=",", skip_header=1)
+class ImportarDados:
+    def __init__(self, caminho_arquivo):
+        self.array = np.genfromtxt(caminho_arquivo, delimiter=",", skip_header=1)
+        self.idade = self.array[:, 1]
+        self.mat = self.array[:, 2]
+        self.est = self.array[:, 3]
+        self.prog = self.array[:, 4]
+        self.faltas = self.array[:, 5]
 
-idade = array[:, 1]
-mat = array[:, 2]
-est = array[:, 3]
-prog = array[:, 4]
-faltas = array[:, 5]
+        self.variaveis = {
+            'Idade': self.idade,
+            'Notas de Matemática': self.mat,
+            'Notas de Estatística': self.est,
+            'Notas de Programação': self.prog,
+            'Faltas': self.faltas
+        }
 
-variaveis = {
-    'Idade': idade,
-    'Notas de Matemática': mat,
-    'Notas de Estatistica': est,
-    'Notas de Programação': prog,
-    'Faltas': faltas
-}
+class AnaliseEstatistica:
+    def mean(self, array):
+        return np.mean(array)
 
-shits = np.array([idade, mat, est, prog, faltas])
+    def median(self, array):
+        return np.median(array)
 
-def mean(array):
-    return np.mean(array)
+    def mode(self, array):
+        valores, counts = np.unique(array, return_counts=True)
+        indice_max = np.argmax(counts)
+        return valores[indice_max]
 
-def mode(array):
-    valores, counts = np.unique(array, return_counts=True)
-    max = np.argmax(counts)
-    return valores[max]
-    # falta fazer o bimodal da silva
-    
-def median(array):
-    return np.median(array)
+    def std(self, array):
+        return np.std(array)
 
-def std(array):
-    return np.std(array)
+    def variance(self, array):
+        return np.var(array)
 
-def interval(array):
-    return np.max(array) - np.min(array)
+    def interval(self, array):
+        return np.max(array) - np.min(array)
 
-def variance(array):
-    return np.var(array)
+    def z_score(self, array):
+        return (array - np.mean(array)) / np.std(array)
 
-def z_score(array):
-    return (array - np.mean(array)) / np.std(array)
+class DeteccaoOutliers:
+    def cerca_turkey(self, array):
+        q1 = np.percentile(array, 25)
+        q3 = np.percentile(array, 75)
+        iqr = q3 - q1
+        limite_inferior = q1 - 1.5 * iqr
+        limite_superior = q3 + 1.5 * iqr
+        return limite_inferior, limite_superior
 
-def cerca_turkey(array):
-    q1 = np.percentile(array, 25)
-    q3 = np.percentile(array, 75)
-    iqr = q3 - q1
-    limite_inferior = q1 - 1.5 * iqr
-    limite_superior = q3 + 1.5 * iqr
-    return limite_inferior, limite_superior
+    def outliers_tukey(self, array):
+        li, ls = self.cerca_turkey(array)
+        return array[(array < li) | (array > ls)]
+
+    def outliers_z_score(self, array, limite=3):
+        z = (array - np.mean(array)) / np.std(array)
+        return array[(z < -limite) | (z > limite)]
+
+dados = ImportarDados("base.csv")
+analise = AnaliseEstatistica()
+outlier = DeteccaoOutliers()
 
 def generate_report():
+    print("Relatório\n")
 
-    print("A média: ")
-    for nome, variavel in variaveis.items():
-        print(f"{nome}, {mean(variavel)}")
+    for nome, var in dados.variaveis.items():
+        print(f"--- {nome} ---")
+        print(f"Média: {analise.mean(var):.2f}")
+        print(f"Mediana: {analise.median(var):.2f}")
+        print(f"Moda: {analise.mode(var)}")
+        print(f"Desvio Padrão: {analise.std(var):.2f}")
+        print(f"Variância: {analise.variance(var):.2f}")
+        print(f"Intervalo: {analise.interval(var):.2f}")
+        print(f"Z-Score (amostragem): {np.round(analise.z_score(var), 2)}")
 
-    print("A mediana: ")
-    for nome, variavel in variaveis.items():
-        print(f"{nome}, {median(variavel)}")
-        
-    print("A moda: ")
-    for nome, variavel in variaveis.items():
-        print(f"{nome}, {mode(variavel)}")
+        inf, sup = outlier.cerca_turkey(var)
+        print(f"Cerca de Tukey: Inferior = {inf:.2f}, Superior = {sup:.2f}")
 
-    print("O desvio padrão: ")
-    for nome, variavel in variaveis.items():
-        print(f"{nome}, {std(variavel):.2f}")
-    
-    print("A variância: ")
-    for nome, variavel in variaveis.items():
-        print(f"{nome}, {variance(variavel):.2f}")
+        outliers_tukey = outlier.outliers_tukey(var)
+        outliers_z = outlier.outliers_z_score(var)
 
-    print("O intervalo: ")
-    for nome, variavel in variaveis.items():
-        print(f"{nome}, {interval(variavel):.2f}")
-
-    print("O Z-Score: ")
-    for nome, variavel in variaveis.items():
-        print(f"{nome}, {z_score(variavel)}")
-        # acho que tem q arredondar o caba aq
-
-    print("Cerca de Tukey: ")
-    for nome, variavel in variaveis.items():
-        inf, sup = cerca_turkey(variavel)
-        print(f"{nome}, Inferior: {inf:.2f}, Superior: {sup:.2f}")
-
-    #falta fazer os outliers
+        print(f"Outliers (Tukey): {outliers_tukey}")
+        print(f"Outliers (Z-Score): {outliers_z}")
+        print()
 
 generate_report()
