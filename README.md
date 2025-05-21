@@ -74,8 +74,6 @@ Para acessar sua branch e começar a contribuir, utilize:
    - 📁 classes/
    - 📁 works/
 - 📁 data/<br>
-  -📁 processed/<br>
-  -📁 raw/
 - 📁 notebooks/<br>
   -📄into.ipynb<br>
 - 📁 src/<br>
