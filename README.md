@@ -103,7 +103,7 @@ Para acessar sua branch e começar a contribuir, utilize:
 - 📁 raw: Armazena os dados brutos, exatamente como foram obtidos de fontes externas (bases públicas, web scraping, APIs, etc).
 
 📁 notebooks/
-- intro.ipynb: Notebook introdutório explicando como utilizar o Jupyter Notebook, incluindo exemplos práticos para facilitar o uso da ferramenta.
+- into.ipynb: Notebook introdutório explicando como utilizar o Jupyter Notebook, incluindo exemplos práticos para facilitar o uso da ferramenta.
 
 📁 src/
 - 📁 Descriptive Statistics: Pasta para os códigos dos métodos da estatística descritiva<br>
